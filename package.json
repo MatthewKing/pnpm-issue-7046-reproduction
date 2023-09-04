@@ -1,0 +1,7 @@
+{
+  "name": "pnpm-issue-reproduction",
+  "private": true,
+  "dependencies": {
+    "next": "^13.4.19"
+  }
+}
