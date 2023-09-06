@@ -27,5 +27,5 @@ Write-Host
 $storePath = pnpm store path
 $hash = Get-FileHash -Path $topNonHardLinkedFile.FullName -Algorithm SHA512
 $storeFileName = ($hash.Hash).ToLower().Substring(2, 126)
-$storeFile = Get-ChildItem -File -Path $storePath -Include $hashFileName -Recurse | Select-Object FullName -First 1
+$storeFile = Get-ChildItem -File -Path $storePath -Include $storeFileName -Recurse | Select-Object FullName -First 1
 fsutil hardlink list $storeFile.FullName
