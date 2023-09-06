@@ -54,7 +54,7 @@ OK, so at this point we can see that this file is NOT hardlinked. Just out of in
 $storePath = pnpm store path
 $hash = Get-FileHash -Path node_modules\.pnpm\@next+swc-win32-x64-msvc@13.4.19\node_modules\@next\swc-win32-x64-msvc\next-swc.win32-x64-msvc.node -Algorithm SHA512
 $storeFileName = ($hash.Hash).ToLower().Substring(2, 126)
-$storeFile = Get-ChildItem -File -Path $storePath -Include $hashFileName -Recurse | Select-Object FullName -First 1
+$storeFile = Get-ChildItem -File -Path $storePath -Include $storeFileName -Recurse | Select-Object FullName -First 1
 fsutil hardlink list $storeFile.FullName
 ```
 
