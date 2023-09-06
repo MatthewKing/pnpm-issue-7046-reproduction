@@ -1,8 +1,10 @@
 # pnpm issue reproduction
 
-I'm having an issue with [pnpm](https://pnpm.io/) on Windows 11 where some files in `node_modules` are not being hardlinked back to their location in the pnpm store.
+I'm having an [issue](https://github.com/pnpm/pnpm/issues/7046) with [pnpm](https://pnpm.io/) on Windows 11 where some files in `node_modules` are not being hardlinked back to their location in the pnpm store.
 
 This repository exists as a very simple reproduction of the issue.
+
+Here is a link to the issue itself: https://github.com/pnpm/pnpm/issues/7046
 
 ## Steps to reproduce:
 
